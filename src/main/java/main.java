@@ -5,7 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class main {
-        public static void test(String[] args){
+        public static void main(String[] args){
 
             String url = "jdbc:mysql://34.159.157.247/datenbank";
             String user = "root";
