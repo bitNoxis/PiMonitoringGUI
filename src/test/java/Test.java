@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class AClassWithOneJUnitTest {
+class AClassWithOneUnitTest {
 
     @Test
     void demoTestMethod() {
@@ -13,7 +13,7 @@ class AClassWithOneJUnitTest {
     @Test
     void test_JUit() {
     String str1 = "Test";
-    assertEquals("1",str1);
+    assertEquals("Test",str1);
     }
 }
 
