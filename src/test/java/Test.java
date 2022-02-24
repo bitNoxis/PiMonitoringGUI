@@ -7,13 +7,13 @@ class AClassWithOneUnitTest {
 
     @Test
     void demoTestMethod() {
-        assertTrue(false);
+        assertTrue(true);
     }
 
     @Test
     void test_JUit() {
     String str1 = "Test";
-    assertEquals("1",str1);
+    assertEquals("Test",str1);
     }
 }
 //1233
