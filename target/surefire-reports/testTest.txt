@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: testTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.01 s <<< FAILURE! - in testTest
+test_JUit  Time elapsed: 0.007 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <1> but was: <Test>
+	at testTest.test_JUit(Test.java:16)
+
+demoTestMethod  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at testTest.demoTestMethod(Test.java:10)
+
