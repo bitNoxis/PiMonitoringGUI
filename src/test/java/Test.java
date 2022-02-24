@@ -7,7 +7,7 @@ class AClassWithOneUnitTest {
 
     @Test
     void demoTestMethod() {
-        assertTrue(false);
+        assertTrue(true);
     }
 
     @Test

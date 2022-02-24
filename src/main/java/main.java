@@ -4,8 +4,10 @@ import java.sql.Statement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+
 public class main {
         public static void main(String[] args){
+new MonitoringPanel();
 
             String url = "jdbc:mysql://34.159.157.247/datenbank";
             String user = "root";
@@ -15,6 +17,7 @@ public class main {
                 Connection con = DriverManager.getConnection(url, user, pass);
                 Statement stm = con.createStatement();
                 ResultSet rs = stm.executeQuery("select * from entries;");
+
 
                 while(rs.next()){
                     System.out.println(rs.getString(1) + " " +
@@ -26,5 +29,6 @@ public class main {
                 System.out.println(e.getMessage());
             }
         }
+
 
 }
