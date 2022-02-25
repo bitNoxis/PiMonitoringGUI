@@ -14,7 +14,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="DE"/>
     <property name="sun.boot.library.path" value="C:\Program Files\jdk-16.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\Finn\AppData\Local\Temp\surefire13010610892194535063\surefirebooter5699517148442574480.jar C:\Users\Finn\AppData\Local\Temp\surefire13010610892194535063 2022-02-24T10-10-01_126-jvmRun1 surefire9238337043403417545tmp surefire_04872897260689764141tmp"/>
+    <property name="sun.java.command" value="C:\Users\Finn\AppData\Local\Temp\surefire15310073807882637663\surefirebooter15776927191740356948.jar C:\Users\Finn\AppData\Local\Temp\surefire15310073807882637663 2022-02-24T12-35-11_150-jvmRun1 surefire951359144972606015tmp surefire_05597538100145179143tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Finn\IdeaProjects\WealthDisplayMonitoring\target\test-classes;C:\Users\Finn\IdeaProjects\WealthDisplayMonitoring\target\classes;C:\Users\Finn\.m2\repository\mysql\mysql-connector-java\8.0.25\mysql-connector-java-8.0.25.jar;C:\Users\Finn\.m2\repository\com\google\protobuf\protobuf-java\3.11.4\protobuf-java-3.11.4.jar;C:\Users\Finn\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\Finn\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Finn\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Finn\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -29,7 +29,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Finn\AppData\Local\Temp\surefire13010610892194535063\surefirebooter5699517148442574480.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Finn\AppData\Local\Temp\surefire15310073807882637663\surefirebooter15776927191740356948.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="16.0.2+7-67"/>
@@ -55,6 +55,6 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="60.0"/>
   </properties>
-  <testcase name="test_JUit" classname="AClassWithOneUnitTest" time="0.002"/>
-  <testcase name="demoTestMethod" classname="AClassWithOneUnitTest" time="0"/>
+  <testcase name="test_JUit" classname="AClassWithOneUnitTest" time="0.003"/>
+  <testcase name="demoTestMethod" classname="AClassWithOneUnitTest" time="0.001"/>
 </testsuite>
