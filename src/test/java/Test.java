@@ -16,7 +16,6 @@ class AClassWithOneUnitTest {
     assertEquals("1",str1);
     }
 }
-//123
 
 
 
