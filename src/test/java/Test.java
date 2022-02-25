@@ -13,7 +13,7 @@ class AClassWithOneUnitTest {
     @Test
     void test_JUit() {
     String str1 = "Test";
-    assertEquals("Test",str1);
+    assertEquals("1",str1);
     }
 }
 //123
