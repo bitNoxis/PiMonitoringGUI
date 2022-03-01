@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: AClassWithOneUnitTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 s - in AClassWithOneUnitTest
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.015 s <<< FAILURE! - in AClassWithOneUnitTest
+test_JUit  Time elapsed: 0.015 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <1> but was: <Test>
+	at AClassWithOneUnitTest.test_JUit(Test.java:16)
+

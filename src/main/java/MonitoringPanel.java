@@ -5,7 +5,9 @@ public class MonitoringPanel extends JFrame {
     private JLabel labelCPUTemp = new JLabel("CPU Temperatur:");
     private JLabel labelCPUFrequenz = new JLabel("CPU GHz:");
     private TextField textboxCPUTemp1 = new TextField();
-    private TextField CPUFrwquenz1 = new TextField();
+    private TextField textboxCPUFrequenz1 = new TextField();
+    private TextField textboxCPUTemp2 = new TextField();
+    private TextField textboxCPUFrequenz2 = new TextField();
 
 
     public MonitoringPanel() throws HeadlessException {
@@ -35,5 +37,11 @@ public class MonitoringPanel extends JFrame {
         panel1.add(labelCPUFrequenz);
 
         return panel1;
+    }
+    private void doFill(String cpuTemp1, String cpuTemp2, String cpuFrequenz1, String cpuFrequenz2 ){
+textboxCPUTemp1.setText(cpuTemp1);
+
+
+
     }
 }
