@@ -2,45 +2,59 @@ import javax.swing.*;
 import java.awt.*;
 
 public class MonitoringPanel extends JFrame {
-    private JLabel labelCPUTemp = new JLabel("CPU Temperatur:");
-    private JLabel labelCPUFrequenz = new JLabel("CPU GHz:");
+    private JLabel labelPI1 = new JLabel("PI 1");
+    private JLabel labelPI2 = new JLabel("PI 2 ");
+    private JLabel labelCPUTemp1 = new JLabel("CPU Temperatur:");
+    private JLabel labelCPUFrequenz1 = new JLabel("CPU GHz:");
+    private JLabel labelCPUTemp2 = new JLabel("CPU Temperatur:");
+    private JLabel getLabelCPUFrequenz2 = new JLabel("CPU GHz:");
+
     private TextField textboxCPUTemp1 = new TextField();
     private TextField textboxCPUFrequenz1 = new TextField();
     private TextField textboxCPUTemp2 = new TextField();
     private TextField textboxCPUFrequenz2 = new TextField();
+    private JLabel labelTEst= new JLabel("");
 
 
     public MonitoringPanel() throws HeadlessException {
         generateFrame();
     }
-    private JFrame generateFrame(){
+
+    private JFrame generateFrame() {
         JFrame frame = new JFrame();
-        frame.setSize(500,500);
+        frame.setSize(500, 500);
         frame.setVisible(true);
         frame.setTitle("Monitoring :)");
 
-        JPanel panel1 =  generateSubPanel1();
-        frame.add(panel1);
-        panel1.setBounds(0,50,150,400);
+        labelCPUTemp1.setBounds(10, 150, 100, 20);
+
+        textboxCPUTemp1.setEditable(false);
+        textboxCPUTemp1.setBounds(120, 150, 50, 20);
+
+
+        labelCPUFrequenz1.setBounds(10, 180, 100, 20);
+
+        textboxCPUFrequenz1.setEditable(false);
+        textboxCPUFrequenz1.setBounds(120, 180, 50, 20);
+
+        labelPI1.setFont(new Font("Dialog", Font.BOLD, 20));
+        labelPI1.setBounds(100, 70, 100, 30);
+
+        frame.add(textboxCPUFrequenz1);
+        frame.add(labelCPUFrequenz1);
+        frame.add(textboxCPUTemp1);
+        frame.add(labelCPUTemp1);
+        frame.add(labelPI1);
+        frame.add(labelTEst);
 
         return frame;
     }
-    private JPanel generateSubPanel1(){
-        JPanel panel1= new JPanel();
 
-        textboxCPUTemp1.setEditable(false);
-        textboxCPUTemp1.setBounds(60,50, 50,10);
-        labelCPUTemp.setBounds(10,50,50,10);
-        panel1.add(labelCPUTemp);
-        panel1.add(textboxCPUTemp1);
-        labelCPUFrequenz.setBounds(10,70,50,10);
-        panel1.add(labelCPUFrequenz);
-
-        return panel1;
-    }
-    private void doFill(String cpuTemp1, String cpuTemp2, String cpuFrequenz1, String cpuFrequenz2 ){
-textboxCPUTemp1.setText(cpuTemp1);
-
+    public void doFill(String cpuTemp1, String cpuFrequenz1, String cpuTemp2, String cpuFrequenz2) {
+        textboxCPUTemp1.setText(cpuTemp1);
+        textboxCPUFrequenz1.setText(cpuFrequenz1);
+//textboxCPUTemp2.setText(cpuTemp2);
+//textboxCPUFrequenz2.setText(cpuFrequenz2);
 
 
     }
