@@ -1,4 +1,6 @@
 import java.sql.*;
+import java.time.LocalDateTime;
+import java.util.Locale;
 
 import static java.lang.Thread.sleep;
 
@@ -30,15 +32,39 @@ public class DataImport {
                 ResultSet rs2 = stm2.executeQuery("SELECT * FROM entries2 ORDER BY entryID DESC LIMIT 1;");
 
                 while (rs1.next() && rs2.next()) {
+                    long now = System.currentTimeMillis();
+                    Timestamp sqlTimestamp = new Timestamp(now);
 
-                    cpuTemperatur1 = rs1.getString(1);
-                    cpuFrequenz1 = rs1.getString(2);
 
-                    cpuTemperatur2 = rs2.getString(2);
-                    cpuFrequenz2 = rs2.getString(1);
+                    if (  Timestamp.valueOf( rs1.getString(3)).before( Timestamp.valueOf(LocalDateTime.now().minusMinutes(1).minusHours(1)))){
 
+                        cpuTemperatur1= "offline";
+                        cpuFrequenz1 = "offline";
+                    } else {
+                        cpuTemperatur1 = rs1.getString(1);
+                        cpuFrequenz1 = rs1.getString(2);
+                        System.out.println(rs1.getString(3));
+
+                   }
+                    if (Timestamp.valueOf( rs2.getString(3)).before(Timestamp.valueOf(LocalDateTime.now().minusMinutes(1).minusHours(1)))){
+
+                        cpuTemperatur2= "offline";
+                        cpuFrequenz2 = "offline";
+                    } else {
+                        cpuTemperatur2 = rs2.getString(1);
+                        cpuFrequenz2 = rs2.getString(2);
+                        System.out.println(rs2.getString(3));
+
+                    }
+
+                   // cpuTemperatur2 = rs2.getString(1);
+                  //  cpuFrequenz2 = rs2.getString(2);
+
+                    //System.out.println(rs2.getString(3));
+
+
+                    doWrite(cpuTemperatur1, cpuFrequenz1, cpuTemperatur2, cpuFrequenz2);
                 }
-                doWrite(cpuTemperatur1, cpuFrequenz1, cpuTemperatur2, cpuFrequenz2);
             } catch (SQLException e) {
                 System.out.println(e.getMessage());
             }
@@ -46,6 +72,9 @@ public class DataImport {
     }
 
     private void doWrite(String cpuTemp1, String cpuFrequenz1, String cpuTemp2, String cpuFrequenz2) {
+
+
+
 
         test.doFill(cpuTemp1, cpuFrequenz1, cpuTemp2, cpuFrequenz2);
 
